@@ -21,4 +21,5 @@ export default {
   cloudinary_api_secret: process.env.CLOUDINARY_API_SECRET,
   super_admin_email: process.env.SUPER_ADMIN_EMAIL,
   super_admin_password: process.env.SUPER_ADMIN_PASSWORD,
+  remove_bg_api: process.env.REMOVE_BG_API,
 };
