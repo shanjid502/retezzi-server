@@ -41,11 +41,11 @@
     "multer": "^2.0.2",
     "nodemailer": "^7.0.10",
     "prettier": "^3.6.2",
-    "zod": "^4.1.12"
+    "zod": "^4.1.12",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.5"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.5",
     "@types/node": "^24.10.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
