@@ -15,7 +15,7 @@ app.use(cookieParser());
 app.use('/api/v1', router);
 
 const test = (req: Request, res: Response) => {
-  const message = `Patwari villa tenent managing server ${req.url}`;
+  const message = `Rentezzi server ${req.url}`;
   res.send(message);
 };
 
