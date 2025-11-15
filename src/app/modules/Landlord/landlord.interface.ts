@@ -5,12 +5,6 @@ export interface TUserName {
   lastName?: string;
 }
 
-export interface TLandlord {
-  id: string;
-  user: Types.ObjectId;
-  name: TUserName;
-}
-
 export interface TAddress {
   /*  Building / apartment-complex name printed on the front gate 
       e.g. “Saima Tower”, “Green View Villa”                                  */
@@ -74,6 +68,7 @@ export interface TLandlord {
   user: Types.ObjectId;
   name: TUserName;
   address: TAddress;
+  email?: string;
   gender: 'male' | 'female' | 'other';
   profilePicture?: string;
   isDeleted: boolean;

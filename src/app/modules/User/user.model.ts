@@ -1,4 +1,4 @@
-import { Schema } from 'mongoose';
+import { model, Schema } from 'mongoose';
 import { TUser, UserModel } from './user.interface';
 import { USER_ROLE, USER_STATUS } from './user.constant';
 import bcrypt from 'bcrypt';
@@ -69,3 +69,5 @@ userSchema.post('save', function (doc, next) {
   doc.password = '';
   next();
 });
+
+export const User = model<TUser, UserModel>('User', userSchema);

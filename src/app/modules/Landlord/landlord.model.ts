@@ -43,6 +43,14 @@ const landlordSchema = new Schema<TLandlord, LandlordModel>(
       required: [true, 'User ID is required'],
     },
     name: nameSchema,
+    email: {
+      type: String,
+      unique: true,
+      match: [
+        /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+        'Please fill a valid email address',
+      ],
+    },
     address: { type: addressSchema, required: true },
     gender: {
       type: String,
