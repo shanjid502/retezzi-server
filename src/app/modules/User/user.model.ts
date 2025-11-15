@@ -28,10 +28,6 @@ const userSchema = new Schema<TUser, UserModel>(
         'Please enter a valid Bangladeshi mobile number',
       ],
     },
-    name: {
-      type: String,
-      required: true,
-    },
     password: {
       type: String,
       required: true,
