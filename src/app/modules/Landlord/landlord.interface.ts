@@ -8,19 +8,19 @@ export interface TUserName {
 export interface TAddress {
   /*  Building / apartment-complex name printed on the front gate 
       e.g. “Saima Tower”, “Green View Villa”                                  */
-  VillaName: string;
+  villaName: string;
 
   /*  Administrative division (বিভাগ) – exact spelling for receipts
       e.g. “Dhaka”, “Chattogram”, “Rajshahi”                                */
-  Division: string;
+  division: string;
 
   /*  District (জেলা) name – keep lower-case to match official list
       e.g. “Dhaka”, “Comilla”, “Sylhet”                                     */
-  District: string; // ← fixed capital: string  (not String)
+  district: string; // ← fixed capital: string  (not String)
 
   /*  Police station / Thana (থানা) – used for legal address & courier
       e.g. “Mohammadpur”, “Panchlaish”, “Kotwali”                          */
-  PoliceStation: string;
+  policeStation: string;
 
   /*  Local area / neighbourhood / sector / মহল্লা
       e.g. “Mohammadpur”, “Block-C”, “West Shewrapara”                     */
@@ -36,7 +36,7 @@ export interface TAddress {
 
   /*  Backup landlord / caretaker number (with country code)
       e.g. “+8801712345678”                                                 */
-  secondaryPhoneNumber?: string;
+  phoneNumber: string;
 
   /*  House or holding number visible on the facade
       e.g. “43/A”, “12”, “156 (Old 84)”      OPTIONAL                        */
@@ -64,7 +64,6 @@ export interface TAddress {
 }
 
 export interface TLandlord {
-  id: string;
   user: Types.ObjectId;
   name: TUserName;
   address: TAddress;

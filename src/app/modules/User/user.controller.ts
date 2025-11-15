@@ -5,7 +5,6 @@ import { UserService } from './user.service';
 
 const createLandlord = catchAsync(async (req, res) => {
   const { password, landlord: landlordPayload } = req.body;
-
   const result = await UserService.createLandlordIntoDB(
     password,
     landlordPayload,

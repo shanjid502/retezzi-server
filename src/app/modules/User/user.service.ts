@@ -13,6 +13,7 @@ const createLandlordIntoDB = async (password: string, payload: TLandlord) => {
 
   userData.password = password;
   userData.role = 'landlord';
+  userData.phoneNumber = payload.address.phoneNumber || '';
   userData.email = payload.email;
 
   const session = await mongoose.startSession();

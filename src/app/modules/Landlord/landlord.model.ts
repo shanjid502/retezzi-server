@@ -9,18 +9,18 @@ const nameSchema = new Schema({
 
 const addressSchema = new Schema(
   {
-    VillaName: { type: String, required: [true, 'VillaName is required'] },
-    Division: { type: String, required: [true, 'Division is required'] },
-    District: { type: String, required: [true, 'District is required'] },
-    PoliceStation: {
+    villaName: { type: String, required: [true, 'VillaName is required'] },
+    division: { type: String, required: [true, 'Division is required'] },
+    district: { type: String, required: [true, 'District is required'] },
+    policeStation: {
       type: String,
       required: [true, 'Police Station is required'],
     },
     areaName: { type: String, required: [true, 'Area Name is required'] },
     roadName: { type: String, required: [true, 'Road Name is required'] },
     postalCode: { type: String, required: [true, 'Postal Code is required'] },
-    secondaryPhoneNumber: { type: String },
-    houseNumber: { type: String },
+    phoneNumber: { type: String },
+    houseNumber: { type: String, required: [true, 'Postal Code is required'] },
     floorNumber: { type: String },
     directions: { type: String },
     flatNumber: { type: String, required: [true, 'Flat Number is required'] },
@@ -32,11 +32,6 @@ const addressSchema = new Schema(
 
 const landlordSchema = new Schema<TLandlord, LandlordModel>(
   {
-    id: {
-      type: String,
-      required: [true, 'ID is required'],
-      unique: [true, 'ID must be unique'],
-    },
     user: {
       type: Schema.Types.ObjectId,
       ref: 'User',

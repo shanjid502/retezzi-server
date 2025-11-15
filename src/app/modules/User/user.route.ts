@@ -10,3 +10,5 @@ router.post(
   validateRequest(createLandlordValidationSchema),
   UserController.createLandlord,
 );
+
+export const UserRoutes = router;

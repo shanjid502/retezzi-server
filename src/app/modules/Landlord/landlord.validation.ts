@@ -6,10 +6,10 @@ const createLandlordUserNameSchema = z.object({
 });
 
 const createLandlordAddressSchema = z.object({
-  VillaName: z.string().min(1, 'VillaName is required'),
-  Division: z.string().min(1, 'Division is required'),
-  District: z.string().min(1, 'District is required'),
-  PoliceStation: z.string().min(1, 'Police Station is required'),
+  villaName: z.string().min(1, 'VillaName is required'),
+  division: z.string().min(1, 'Division is required'),
+  district: z.string().min(1, 'District is required'),
+  policeStation: z.string().min(1, 'Police Station is required'),
   areaName: z.string().min(1, 'Area Name is required'),
   roadName: z.string().min(1, 'Road Name is required'),
   postalCode: z.string().min(1, 'Postal Code is required'),
