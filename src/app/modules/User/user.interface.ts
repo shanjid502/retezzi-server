@@ -4,6 +4,10 @@ import { TUserRole, TUserStatus } from './user.constant';
 export interface TUser {
   id: string;
   email?: string;
+  phoneNumber: string;
+  name: string;
+  password: string;
+  lastPasswordChangedAt?: Date;
   role: TUserRole;
   status: TUserStatus;
   isDeleted: boolean;
