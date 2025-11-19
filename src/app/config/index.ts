@@ -22,4 +22,5 @@ export default {
   super_admin_email: process.env.SUPER_ADMIN_EMAIL,
   super_admin_password: process.env.SUPER_ADMIN_PASSWORD,
   remove_bg_api: process.env.REMOVE_BG_API,
+  client_url: process.env.CLIENT_URL,
 };

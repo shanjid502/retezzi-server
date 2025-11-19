@@ -17,8 +17,8 @@ const createLandlordAddressSchema = z.object({
   houseNumber: z.string().optional(),
   floorNumber: z.string().optional(),
   directions: z.string().optional(),
-  flatNumber: z.string().min(1, 'Flat Number is required'),
-  block: z.string().min(1, 'Block is required'),
+  flatNumber: z.string().optional(),
+  block: z.string().optional(),
   landmark: z.string().min(1, 'Landmark is required'),
 });
 
